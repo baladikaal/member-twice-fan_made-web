@@ -1,0 +1,284 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    transition: 0.5s;
+}
+
+.member {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    transition: 0.5s;
+
+}
+
+.logo {
+    transition: 0.5s;
+}
+
+.list {
+    position: relative;
+    display: flex;
+}
+
+.list li {
+    list-style: none;
+}
+
+
+.list li::before {
+    content: attr(data-text);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* transform: translate(-50%, calc(-50% + 150px)); */
+    font-size: 14vw;
+    pointer-events: none;
+    font-weight: 700;
+    transition: 0.5s;
+    opacity: 0;
+}
+
+.list li:hover:before {
+    opacity: 0.1;
+    transform: translate(-50%, calc(-50% + 150px));
+}
+
+.list li a {
+    position: relative;
+    display: inline-block;
+    width: 100px;
+    height: 150px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #333;
+    border-radius: 10px;
+    text-decoration: none;
+    margin: 10px;
+    font-size: 4em;
+    transform-style: preserve-3d;
+    perspective: 500px;
+    box-shadow: 0 25px 35px rgba(0, 0, 0, 0.4);
+    transition: background 0.25s;
+}
+
+/* untuk warna background tiap member */
+
+.list li a:hover.nayeon {
+    background: #C6F6FF;
+}
+
+.list li a:hover.jeong {
+    background: #BFD85C;
+}
+
+.list li a:hover.momo {
+    background: #F97B90;
+}
+
+.list li a:hover.sana {
+    background: #9170BA;
+}
+
+.list li a:hover.jihyo {
+    background: #FFBE4A;
+}
+
+.list li a:hover.mina {
+    background: #54CDB5;
+}
+
+.list li a:hover.dahyun {
+    background: #FEF0E6;
+}
+
+.list li a:hover.chae {
+    background: #FA1819;
+}
+
+.list li a:hover.cuwi {
+    background: #005EC8;
+}
+
+/* untuk fhoto */
+
+ul li a .image {
+    width: 100%;
+    height: 100%;
+}
+
+ul li a.nayeon .image {
+    background: url(image/ny.png);
+    background-size: 100%;
+    border-radius: 10px;
+}
+
+ul li a.jeong .image {
+    background: url(image/Jy.png);
+    background-size: 100%;
+    border-radius: 10px;
+}
+
+ul li a.momo .image {
+    background: url(image/mm.png);
+    background-size: 100%;
+    border-radius: 10px;
+}
+
+ul li a.sana .image {
+    background: url(image/sn.png);
+    background-size: 100%;
+    border-radius: 10px;
+}
+
+ul li a.jihyo .image {
+    background: url(image/jhy.png);
+    background-size: 100%;
+    border-radius: 10px;
+}
+
+ul li a.mina .image {
+    background: url(image/mn.png);
+    background-size: 100%;
+    border-radius: 10px;
+}
+
+
+ul li a.dahyun .image {
+    background: url(image/dy.png);
+    background-size: 100%;
+    border-radius: 10px;
+}
+
+ul li a.chae .image {
+    background: url(image/cy.png);
+    background-size: 100%;
+    border-radius: 10px;
+}
+
+ul li a.cuwi .image {
+    background: url(image/tz.png);
+    background-size: 100%;
+    border-radius: 10px;
+}
+
+/* .member {
+    background-image: url(image/tz.png) !important;
+} */
+
+.member .list li:hover {
+    background-image: url('image/sn.png') no-repeat;
+}
+
+
+
+/* untuk 3d */
+
+.list li a .image {
+    transition: 0.25s;
+    pointer-events: none;
+}
+
+.list li a:hover .image {
+    transform: scale(1.5) translateZ(50px);
+}
+
+/* untuk 3d */
+
+.js-tilt-glare {
+    border-radius: 10px;
+}
+
+
+/* ganti background gambar belakang */
+.member #picture {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to bottom right, #FC5D9D, #F7C596);
+}
+
+
+.member #picture.one {
+    background: url(image/1-ny.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+
+
+.member #picture.two {
+    background: url(image/9.jy.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    ;
+}
+
+.member #picture.tri {
+    background: url(image/6.mm.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    ;
+}
+
+.member #picture.for {
+    background: url(image/8.sn.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    ;
+}
+
+.member #picture.fav {
+    background: url(image/7.jhy.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    ;
+}
+
+.member #picture.six {
+    background: url(image/4-mn.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    ;
+}
+
+.member #picture.seven {
+    background: url(image/2-dy.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    ;
+}
+
+.member #picture.eg {
+    background: url(image/5-cy.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    ;
+
+}
+
+.member #picture.nain {
+    background: url(image/3-tz.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    ;
+}

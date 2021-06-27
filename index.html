@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+        integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <section class="member">
+        <div id="picture"></div>
+        <div id="tw-logo"></div>
+        <ul class="list">
+            <li rel="one" data-text="Nayeon" data-color="#C6F6FF">
+                <a href="#" class="nayeon">
+                    <div class="image"></div>
+                </a>
+            </li>
+            <li rel="two" data-text="Jeongyeon" data-color="#BFD85C">
+                <a href="#" class="jeong">
+                    <div class="image"></div>
+                </a>
+            </li>
+            <li rel="tri" data-text="Momo" data-color="#F97B90">
+                <a href="#" class="momo">
+                    <div class="image"></div>
+                </a>
+            </li>
+            <li rel="for" data-text="Sana" data-color="#9170BA">
+                <a href="#" class="sana">
+                    <div class="image"></div>
+                </a>
+            </li>
+            <li rel="fav" data-text="Jihyo" data-color="#FFBE4A">
+                <a href="#" class="jihyo">
+                    <div class="image"></div>
+                </a>
+            </li>
+            <li rel="six" data-text="Mina" data-color="#54CDB5">
+                <a href="#" class="mina">
+                    <div class="image"></div>
+                </a>
+            </li>
+            <li rel="seven" data-text="Dahyun" data-color="#FEF0E6">
+                <a href="#" class="dahyun">
+                    <div class="image"></div>
+                </a>
+            </li>
+            <li rel="eg" data-text="Chaeyoung" data-color="#FA1819">
+                <a href="#" class="chae">
+                    <div class="image"></div>
+                </a>
+            </li>
+            <li rel="nain" data-text="Tzuyu" data-color="#005EC8">
+                <a href="#" class="cuwi">
+                    <div class="image"></div>
+                </a>
+            </li>
+        </ul>
+    </section>
+
+    <!-- </div>
+    </div> -->
+
+
+
+    <script src="vanilla-tilt.min.js"></script>
+
+    <!-- untuk ganti background dengan list -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript">
+        $('ul li').hover(function () {
+            $('#picture').toggleClass(
+                $(this).attr('rel'));
+
+            $('#tw-logo').toggleClass(
+                $(this).attr('rel'));
+        });
+    </script>
+
+    <script>
+        // untuk 3d dengan vanilla js
+        VanillaTilt.init(document.querySelectorAll(".list li a"), {
+            max: 30,
+            speed: 400,
+            glare: true,
+            "max-glare": 1,
+        });
+
+        // batas 3d
+
+        let list = document.querySelectorAll('.list li');
+        let bg = document.querySelector('.member');
+        list.forEach(elements => {
+            elements.addEventListener('mouseenter', function (event) {
+                let color = event.target.getAttribute('data-color');
+                bg.style.backgroundColor = color;
+            })
+
+            elements.addEventListener('mouseleave', function (event) {
+                let color = event.target.getAttribute('data-color');
+                bg.style.backgroundColor = '#FC5D9D';
+            })
+        })
+    </script>
+</body>
+
+</html>
