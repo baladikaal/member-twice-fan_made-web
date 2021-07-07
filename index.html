@@ -13,58 +13,6 @@
 </head>
 
 <body>
-    <section class="member">
-        <div id="picture"></div>
-        <div id="tw-logo"></div>
-        <ul class="list">
-            <li rel="one" data-text="Nayeon" data-color="#C6F6FF">
-                <a href="#" class="nayeon">
-                    <div class="image"></div>
-                </a>
-            </li>
-            <li rel="two" data-text="Jeongyeon" data-color="#BFD85C">
-                <a href="#" class="jeong">
-                    <div class="image"></div>
-                </a>
-            </li>
-            <li rel="tri" data-text="Momo" data-color="#F97B90">
-                <a href="#" class="momo">
-                    <div class="image"></div>
-                </a>
-            </li>
-            <li rel="for" data-text="Sana" data-color="#9170BA">
-                <a href="#" class="sana">
-                    <div class="image"></div>
-                </a>
-            </li>
-            <li rel="fav" data-text="Jihyo" data-color="#FFBE4A">
-                <a href="#" class="jihyo">
-                    <div class="image"></div>
-                </a>
-            </li>
-            <li rel="six" data-text="Mina" data-color="#54CDB5">
-                <a href="#" class="mina">
-                    <div class="image"></div>
-                </a>
-            </li>
-            <li rel="seven" data-text="Dahyun" data-color="#FEF0E6">
-                <a href="#" class="dahyun">
-                    <div class="image"></div>
-                </a>
-            </li>
-            <li rel="eg" data-text="Chaeyoung" data-color="#FA1819">
-                <a href="#" class="chae">
-                    <div class="image"></div>
-                </a>
-            </li>
-            <li rel="nain" data-text="Tzuyu" data-color="#005EC8">
-                <a href="#" class="cuwi">
-                    <div class="image"></div>
-                </a>
-            </li>
-        </ul>
-    </section>
-
     <div class="timeline-container" id="timeline-1">
         <div class="timeline-header">
             <h2 class="timeline-header__title">THE JOURNEY OF TWICE</h2>
@@ -175,6 +123,60 @@
         </div>
     </div>
 
+    <section class="member">
+        <div id="picture"></div>
+        <div id="tw-logo"></div>
+        <ul class="list">
+            <li rel="one" data-text="Nayeon" data-color="#C6F6FF">
+                <a href="javascript:void(0)" class="nayeon">
+                    <div class="image"></div>
+                </a>
+            </li>
+            <li rel="two" data-text="Jeongyeon" data-color="#BFD85C">
+                <a href="javascript:void(0)" class="jeong">
+                    <div class="image"></div>
+                </a>
+            </li>
+            <li rel="tri" data-text="Momo" data-color="#F97B90">
+                <a href="javascript:void(0)" class="momo">
+                    <div class="image"></div>
+                </a>
+            </li>
+            <li rel="for" data-text="Sana" data-color="#9170BA">
+                <a href="javascript:void(0)" class="sana">
+                    <div class="image"></div>
+                </a>
+            </li>
+            <li rel="fav" data-text="Jihyo" data-color="#FFBE4A">
+                <a href="javascript:void(0)" class="jihyo">
+                    <div class="image"></div>
+                </a>
+            </li>
+            <li rel="six" data-text="Mina" data-color="#54CDB5">
+                <a href="javascript:void(0)" class="mina">
+                    <div class="image"></div>
+                </a>
+            </li>
+            <li rel="seven" data-text="Dahyun" data-color="#FEF0E6">
+                <a href="javascript:void(0)" class="dahyun">
+                    <div class="image"></div>
+                </a>
+            </li>
+            <li rel="eg" data-text="Chaeyoung" data-color="#FA1819">
+                <a href="javascript:void(0)" class="chae">
+                    <div class="image"></div>
+                </a>
+            </li>
+            <li rel="nain" data-text="Tzuyu" data-color="#005EC8">
+                <a href="javascript:void(0)" class="cuwi">
+                    <div class="image"></div>
+                </a>
+            </li>
+        </ul>
+    </section>
+
+
+
     <script src="vanilla-tilt.min.js"></script>
 
     <!-- untuk ganti background dengan list -->
@@ -210,7 +212,7 @@
 
             elements.addEventListener('mouseleave', function (event) {
                 let color = event.target.getAttribute('data-color');
-                bg.style.backgroundColor = '#FC5D9D';
+                bg.style.backgroundColor = 'white';
             })
         })
     </script>
